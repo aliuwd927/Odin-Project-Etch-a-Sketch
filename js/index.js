@@ -18,17 +18,8 @@ const createGrid = (size) => {
         //gridItems.textContent = "";
         gridContainerParent.appendChild(gridItems);
     };
-    //gridLayout(size);
 };
 
-/*
-//Dynamically Inputs CSS Grid
-const gridLayout = (size) => {
-    let gridContainerLayout = document.querySelector('.gridContainer');
-    gridContainerLayout.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-    gridContainerLayout.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-};
-*/
 
 //Prompts User for size of the grid
 let gridSize = prompt('enter a number no more than 22 for screen size', 22);
