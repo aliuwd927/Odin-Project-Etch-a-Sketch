@@ -24,7 +24,8 @@ const createGrid = (size) => {
 };
 
 function divHover(e) {
-    console.log(e.target);
+    //console.log(e.target);
+    
 };
 
 
