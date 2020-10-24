@@ -1,3 +1,5 @@
+window.onload = function (){
+
 const container = document.querySelector('.container');
 
 //Create Grid Div
@@ -17,7 +19,12 @@ const createGrid = (size) => {
         gridItems.classList.add('gridItems');
         //gridItems.textContent = "";
         gridContainerParent.appendChild(gridItems);
+        gridContainerParent.addEventListener("mouseover", divHover);
     };
+};
+
+function divHover(e) {
+    console.log(e.target);
 };
 
 
@@ -33,3 +40,5 @@ createGrid(gridSize);
 //Dynamically Create Css Grids
 gridContainerParent.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 gridContainerParent.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
+};
