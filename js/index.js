@@ -26,7 +26,7 @@ const createGrid = (size) => {
     
         //console.log(hoverEvent.classList.contains('gridItems'));
         if(hoverEvent.classList.contains('gridItems')){
-        
+            hoverEvent.style.backgroundColor = "black";
         }
     };
 };
