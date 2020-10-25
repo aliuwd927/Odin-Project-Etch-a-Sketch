@@ -10,7 +10,6 @@ container.appendChild(gridContainer);
 //Create a Grid Item Div UNDER the gridContainer
 const gridContainerParent = document.querySelector('.gridContainer');
 
-
 //Use for loop to create the div elements
 const createGrid = (size) => {
     for(let i = 0; i < size ** 2; i++){
@@ -19,14 +18,20 @@ const createGrid = (size) => {
         gridItems.classList.add('gridItems');
         //gridItems.textContent = "";
         gridContainerParent.appendChild(gridItems);
-        gridContainerParent.addEventListener("mouseover", divHover);
+        gridContainerParent.addEventListener("mouseover", hoverOver);
+    };
+
+    function hoverOver(e) {
+        let hoverEvent = e.target;
+    
+        //console.log(hoverEvent.classList.contains('gridItems'));
+        if(hoverEvent.classList.contains('gridItems')){
+        
+        }
     };
 };
 
-function divHover(e) {
-    //console.log(e.target);
-    
-};
+
 
 
 //Prompts User for size of the grid
@@ -39,7 +44,7 @@ const getGridSize = (gridSize) > 22 ? gridSize = 22 : '';
 createGrid(gridSize);
 
 //Dynamically Create Css Grids
-gridContainerParent.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-gridContainerParent.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+gridContainerParent.style.gridTemplateColumns = `repeat(${gridSize}, auto)`;
+gridContainerParent.style.gridTemplateRows = `repeat(${gridSize}, auto)`;
 
 };
